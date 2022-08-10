@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Scandit Data Capture SDK",
+        "repositoryURL": "https://github.com/Scandit/datacapture-spm",
+        "state": {
+          "branch": "main",
+          "revision": "15ce2adff5e55a042924f77b92b7ba5f7b93706f",
+          "version": null
+        }
+      },
+      {
+        "package": "Kingfisher",
+        "repositoryURL": "https://github.com/onevcat/Kingfisher.git",
+        "state": {
+          "branch": null,
+          "revision": "2231f92b5af71c78ad2c1450e583bf4a8713b951",
+          "version": "7.3.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
