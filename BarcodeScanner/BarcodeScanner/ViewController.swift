@@ -117,7 +117,39 @@ extension ViewController: BarcodeCaptureListener {
 //                }
 //            }
             
-            WebService.shared.getProduct(from: barcode.data!) { [weak self] product, error, response in
+//            WebService.shared.getProduct(from: barcode.data!) { [weak self] product, error, response in
+//
+//                guard let self = self else { return }
+//                guard error == nil else {
+//                    print(error?.localizedDescription)
+////                    barcodeCapture.isEnabled = true
+//                    self.showSimpleAlert(errorMessage: error?.localizedDescription ?? "Error Found!")
+//                    return
+//                }
+//
+//                guard response as? HTTPURLResponse == nil else {
+//                          print("Error with the response, unexpected status code: \(response)")
+////                          barcodeCapture.isEnabled = true
+//                          self.showSimpleAlert(errorMessage: "Product Not Found!")
+//                          return
+//                      }
+//
+//
+//
+//                guard let product = product, let products = product.products?[0] else { return }
+//
+//                DispatchQueue.main.async {
+//                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                    let vc = storyboard.instantiateViewController(withIdentifier: "ProductVC") as! ProductVC
+//                    vc.product = products
+////                    barcodeCapture.isEnabled = true
+//                    self.navigationController?.pushViewController(vc, animated: true)
+//                }
+//
+//            }
+            
+            
+            WebService.shared.getBarcodeSpiderProduct(from: barcode.data!) { [weak self] product, error, response in
 
                 guard let self = self else { return }
                 guard error == nil else {
@@ -136,17 +168,19 @@ extension ViewController: BarcodeCaptureListener {
 
 
 
-                guard let product = product, let products = product.products?[0] else { return }
+                guard let product = product, let products = product.item_attributes else { return }
 
                 DispatchQueue.main.async {
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let vc = storyboard.instantiateViewController(withIdentifier: "ProductVC") as! ProductVC
-                    vc.product = products
+                    vc.barcodeSpiderProduct = products
 //                    barcodeCapture.isEnabled = true
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
 
             }
+            
+            
 //            WebService.shared.getProduct(from: barcode.data!) { [weak self] product, error in
 //                print(product)
 //                print(error?.localizedDescription)

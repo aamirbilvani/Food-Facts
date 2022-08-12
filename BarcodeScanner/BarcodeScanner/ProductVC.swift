@@ -18,6 +18,8 @@ class ProductVC: UIViewController {
     var product: Products? = nil
     var openFoodFactProduct: OpenFoodFactsProducts? = nil
     
+    var barcodeSpiderProduct: Item_attributes? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,6 +47,10 @@ class ProductVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         productDetailTableView.reloadData()
+        if let product = barcodeSpiderProduct {
+            PersistanceManager().addHistoryItem(product)
+        }
+        
 //        guard let product = product else { return }
 //
 //        if let barcodeNumber = product.barcode_number,
@@ -66,8 +72,12 @@ extension ProductVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductInfoCell", for: indexPath) as! ProductInfoCell
-        guard let product = product else { return UITableViewCell() }
+//        guard let product = product else { return UITableViewCell() }
+//        cell.setupData(product: product)
+        
+        guard let product = barcodeSpiderProduct else { return UITableViewCell() }
         cell.setupData(product: product)
+        
 //        guard let product = openFoodFactProduct else { return UITableViewCell() }
 //        cell.setupData(product: product)
         return cell

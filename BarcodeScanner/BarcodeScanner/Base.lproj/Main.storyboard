@@ -153,17 +153,32 @@
             </objects>
             <point key="canvasLocation" x="286" y="1600"/>
         </scene>
-        <!--View Controller-->
+        <!--History Table View Controller-->
         <scene sceneID="GMw-M5-l7s">
             <objects>
-                <viewController id="NfQ-YM-U6b" sceneMemberID="viewController">
+                <viewController id="NfQ-YM-U6b" customClass="HistoryTableViewController" customModule="BarcodeScanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zPZ-B2-wrI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BU0-MV-c39">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="fNk-a7-Saa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fNk-a7-Saa" firstAttribute="bottom" secondItem="BU0-MV-c39" secondAttribute="bottom" id="M0a-Nu-3J9"/>
+                            <constraint firstItem="BU0-MV-c39" firstAttribute="leading" secondItem="fNk-a7-Saa" secondAttribute="leading" id="RUN-Lx-MOu"/>
+                            <constraint firstItem="fNk-a7-Saa" firstAttribute="trailing" secondItem="BU0-MV-c39" secondAttribute="trailing" id="VGR-D2-SXw"/>
+                            <constraint firstItem="BU0-MV-c39" firstAttribute="top" secondItem="fNk-a7-Saa" secondAttribute="top" id="gCC-uC-FDU"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lJ6-eM-D5k"/>
+                    <connections>
+                        <outlet property="historyTableView" destination="BU0-MV-c39" id="XCA-Wh-Gbn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i6E-bZ-yRJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

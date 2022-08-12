@@ -69,6 +69,35 @@ class WebService {
     }
     
     
+    func getBarcodeSpiderProduct(from barcode: String, completion: @escaping (BarcodeSpiderProductModel?, Error?, URLResponse?) -> Void) {
+        guard !barcode.isEmpty else { return }
+        guard let url = URL(string: "https://api.barcodespider.com/v1/lookup?token=d17f63575d168f34d85d&upc=\(barcode)") else { return }
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            
+            if let error = error {
+                print("Error with fetching films: \(error)")
+                completion(nil, error, nil)
+                return
+            }
+            
+            guard let httpResponse = response as? HTTPURLResponse,
+                  (200...299).contains(httpResponse.statusCode) else {
+                      print("Error with the response, unexpected status code: \(response)")
+                      completion(nil, nil, response)
+                      return
+                  }
+            
+            if let data = data,
+               let product = try? JSONDecoder().decode(BarcodeSpiderProductModel.self, from: data) {
+                
+                print("Product:", product)
+                completion(product, nil, nil)
+            }
+        }
+        task.resume()
+    }
+    
+    
     
     func getSearchedFoodFactsProduct(query: String, completion: @escaping (OpenFoodFactsProductModel?, Error?, URLResponse?) -> Void) {
         guard !query.isEmpty else { return }

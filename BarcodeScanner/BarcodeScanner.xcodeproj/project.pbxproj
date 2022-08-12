@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3423B67A28A386FC00A46012 /* BarcodeSpiderProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3423B67928A386FC00A46012 /* BarcodeSpiderProductModel.swift */; };
+		349C25D928A5139B0021F483 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 349C25D828A5139B0021F483 /* Realm */; };
+		349C25DB28A5139B0021F483 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 349C25DA28A5139B0021F483 /* RealmSwift */; };
 		34A17F042898FD53008A4C61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A17F032898FD53008A4C61 /* AppDelegate.swift */; };
 		34A17F062898FD53008A4C61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A17F052898FD53008A4C61 /* SceneDelegate.swift */; };
 		34A17F082898FD53008A4C61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A17F072898FD53008A4C61 /* ViewController.swift */; };
@@ -27,11 +30,17 @@
 		34B634E8289BA7B8008920A3 /* SearchProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B634E7289BA7B8008920A3 /* SearchProductsVC.swift */; };
 		34B634EB289BD14F008920A3 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B634E9289BD14F008920A3 /* SearchTableViewCell.swift */; };
 		34B634EC289BD14F008920A3 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34B634EA289BD14F008920A3 /* SearchTableViewCell.xib */; };
+		34B92D8528A62797008B75B1 /* PersistanceManager.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B92D8428A62797008B75B1 /* PersistanceManager.swift.swift */; };
+		34B92D8728A62936008B75B1 /* HistoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B92D8628A62936008B75B1 /* HistoryItem.swift */; };
+		34B92D8A28A63BE8008B75B1 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B92D8828A63BE8008B75B1 /* HistoryTableViewCell.swift */; };
+		34B92D8B28A63BE8008B75B1 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34B92D8928A63BE8008B75B1 /* HistoryTableViewCell.xib */; };
+		34B92D8D28A640E7008B75B1 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B92D8C28A640E7008B75B1 /* HistoryTableViewController.swift */; };
 		34BB4D1B289A6B4D003E3C8B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 34BB4D1A289A6B4D003E3C8B /* Kingfisher */; };
 		34BB4D1D289A8C2A003E3C8B /* OpenFoodFactsProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BB4D1C289A8C2A003E3C8B /* OpenFoodFactsProductModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3423B67928A386FC00A46012 /* BarcodeSpiderProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeSpiderProductModel.swift; sourceTree = "<group>"; };
 		34A17F002898FD53008A4C61 /* BarcodeScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarcodeScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34A17F032898FD53008A4C61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34A17F052898FD53008A4C61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +57,11 @@
 		34B634E7289BA7B8008920A3 /* SearchProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProductsVC.swift; sourceTree = "<group>"; };
 		34B634E9289BD14F008920A3 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		34B634EA289BD14F008920A3 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		34B92D8428A62797008B75B1 /* PersistanceManager.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceManager.swift.swift; sourceTree = "<group>"; };
+		34B92D8628A62936008B75B1 /* HistoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryItem.swift; sourceTree = "<group>"; };
+		34B92D8828A63BE8008B75B1 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		34B92D8928A63BE8008B75B1 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
+		34B92D8C28A640E7008B75B1 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		34BB4D1C289A8C2A003E3C8B /* OpenFoodFactsProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFoodFactsProductModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,9 +73,11 @@
 				34A17F1F289900F1008A4C61 /* ScanditOCR in Frameworks */,
 				34A17F19289900F1008A4C61 /* ScanditBarcodeCapture in Frameworks */,
 				34BB4D1B289A6B4D003E3C8B /* Kingfisher in Frameworks */,
+				349C25DB28A5139B0021F483 /* RealmSwift in Frameworks */,
 				34A17F1B289900F1008A4C61 /* ScanditCaptureCore in Frameworks */,
 				34A17F21289900F1008A4C61 /* ScanditParser in Frameworks */,
 				34A17F1D289900F1008A4C61 /* ScanditIdCapture in Frameworks */,
+				349C25D928A5139B0021F483 /* Realm in Frameworks */,
 				34A17F23289900F1008A4C61 /* ScanditTextCapture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,6 +116,8 @@
 				34A17F2428990B52008A4C61 /* ProductVC.swift */,
 				34A17F29289912BA008A4C61 /* WebService.swift */,
 				34B634E7289BA7B8008920A3 /* SearchProductsVC.swift */,
+				34B92D8428A62797008B75B1 /* PersistanceManager.swift.swift */,
+				34B92D8C28A640E7008B75B1 /* HistoryTableViewController.swift */,
 			);
 			path = BarcodeScanner;
 			sourceTree = "<group>";
@@ -109,6 +127,8 @@
 			children = (
 				34A17F2728990E76008A4C61 /* BarcodeProductModel.swift */,
 				34BB4D1C289A8C2A003E3C8B /* OpenFoodFactsProductModel.swift */,
+				3423B67928A386FC00A46012 /* BarcodeSpiderProductModel.swift */,
+				34B92D8628A62936008B75B1 /* HistoryItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -120,6 +140,8 @@
 				34A17F2D2899557E008A4C61 /* ProductInfoCell.xib */,
 				34B634E9289BD14F008920A3 /* SearchTableViewCell.swift */,
 				34B634EA289BD14F008920A3 /* SearchTableViewCell.xib */,
+				34B92D8828A63BE8008B75B1 /* HistoryTableViewCell.swift */,
+				34B92D8928A63BE8008B75B1 /* HistoryTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -148,6 +170,8 @@
 				34A17F20289900F1008A4C61 /* ScanditParser */,
 				34A17F22289900F1008A4C61 /* ScanditTextCapture */,
 				34BB4D1A289A6B4D003E3C8B /* Kingfisher */,
+				349C25D828A5139B0021F483 /* Realm */,
+				349C25DA28A5139B0021F483 /* RealmSwift */,
 			);
 			productName = BarcodeScanner;
 			productReference = 34A17F002898FD53008A4C61 /* BarcodeScanner.app */;
@@ -180,6 +204,7 @@
 			packageReferences = (
 				34A17F17289900F1008A4C61 /* XCRemoteSwiftPackageReference "datacapture-spm" */,
 				34BB4D19289A6B4D003E3C8B /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				349C25D728A5139B0021F483 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 34A17F012898FD53008A4C61 /* Products */;
 			projectDirPath = "";
@@ -199,6 +224,7 @@
 				34A17F2F2899557E008A4C61 /* ProductInfoCell.xib in Resources */,
 				34A17F0D2898FD56008A4C61 /* Assets.xcassets in Resources */,
 				34A17F0B2898FD53008A4C61 /* Main.storyboard in Resources */,
+				34B92D8B28A63BE8008B75B1 /* HistoryTableViewCell.xib in Resources */,
 				34B634EC289BD14F008920A3 /* SearchTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,6 +236,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34B92D8528A62797008B75B1 /* PersistanceManager.swift.swift in Sources */,
+				3423B67A28A386FC00A46012 /* BarcodeSpiderProductModel.swift in Sources */,
+				34B92D8A28A63BE8008B75B1 /* HistoryTableViewCell.swift in Sources */,
 				34A17F2A289912BA008A4C61 /* WebService.swift in Sources */,
 				34A17F2528990B52008A4C61 /* ProductVC.swift in Sources */,
 				34A17F2E2899557E008A4C61 /* ProductInfoCell.swift in Sources */,
@@ -219,7 +248,9 @@
 				34A17F2828990E76008A4C61 /* BarcodeProductModel.swift in Sources */,
 				34A17F062898FD53008A4C61 /* SceneDelegate.swift in Sources */,
 				34BB4D1D289A8C2A003E3C8B /* OpenFoodFactsProductModel.swift in Sources */,
+				34B92D8728A62936008B75B1 /* HistoryItem.swift in Sources */,
 				34B634EB289BD14F008920A3 /* SearchTableViewCell.swift in Sources */,
+				34B92D8D28A640E7008B75B1 /* HistoryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +476,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		349C25D728A5139B0021F483 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		34A17F17289900F1008A4C61 /* XCRemoteSwiftPackageReference "datacapture-spm" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Scandit/datacapture-spm";
@@ -464,6 +503,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		349C25D828A5139B0021F483 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 349C25D728A5139B0021F483 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		349C25DA28A5139B0021F483 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 349C25D728A5139B0021F483 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
 		34A17F18289900F1008A4C61 /* ScanditBarcodeCapture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 34A17F17289900F1008A4C61 /* XCRemoteSwiftPackageReference "datacapture-spm" */;

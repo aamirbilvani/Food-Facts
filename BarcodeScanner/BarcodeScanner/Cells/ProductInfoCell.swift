@@ -43,6 +43,14 @@ class ProductInfoCell: UITableViewCell {
         productImageView.kf.setImage(with: url)
     }
     
+    func setupData(product: Item_attributes) {
+        titleLabel.text = product.title
+        brandLabel.text = product.brand
+        descLabel.text = product.description
+        let url = URL(string: product.image ?? "https://images.openfoodfacts.org/images/products/301/762/042/2003/front_en.399.400.jpg")
+        productImageView.kf.setImage(with: url)
+    }
+    
     
     
 }

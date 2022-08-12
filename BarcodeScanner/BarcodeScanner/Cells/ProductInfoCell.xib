@@ -68,7 +68,7 @@
                 <outlet property="productImageView" destination="N0o-xn-EAg" id="tAV-B0-PQj"/>
                 <outlet property="titleLabel" destination="s8D-J9-Eio" id="CJD-6Z-Cta"/>
             </connections>
-            <point key="canvasLocation" x="275.36231884057975" y="137.94642857142856"/>
+            <point key="canvasLocation" x="158" y="106"/>
         </tableViewCell>
     </objects>
     <resources>

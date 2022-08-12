@@ -43,7 +43,7 @@
                 <outlet property="nameLabel" destination="1jp-ZB-LIA" id="NdY-U1-wib"/>
                 <outlet property="productImageView" destination="RXK-CC-Ggr" id="i8C-uf-7fp"/>
             </connections>
-            <point key="canvasLocation" x="196.37681159420291" y="66.294642857142861"/>
+            <point key="canvasLocation" x="-72" y="49"/>
         </tableViewCell>
     </objects>
 </document>
