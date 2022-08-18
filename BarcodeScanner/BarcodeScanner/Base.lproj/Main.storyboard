@@ -17,17 +17,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0m5-sU-vgk">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0m5-sU-vgk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="81v-qD-9aR"/>
-                            <constraint firstItem="0m5-sU-vgk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="b5X-wg-Atk"/>
-                            <constraint firstItem="0m5-sU-vgk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dVO-Ym-nje"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0m5-sU-vgk" secondAttribute="bottom" id="fzS-wO-o0L"/>
+                            <constraint firstAttribute="trailing" secondItem="0m5-sU-vgk" secondAttribute="trailing" id="DFC-my-gIf"/>
+                            <constraint firstItem="0m5-sU-vgk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ie5-HJ-vMV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0m5-sU-vgk" secondAttribute="bottom" id="LPc-Nd-QDL"/>
+                            <constraint firstItem="0m5-sU-vgk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zCQ-mx-4M4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="djb-dn-z5a"/>
@@ -69,20 +69,35 @@
             </objects>
             <point key="canvasLocation" x="1990" y="713"/>
         </scene>
-        <!--View Controller-->
+        <!--History Product DetailVC-->
         <scene sceneID="qNw-cJ-qjm">
             <objects>
-                <viewController id="LUG-ai-97p" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HistoryProductDetailVC" id="LUG-ai-97p" customClass="HistoryProductDetailVC" customModule="BarcodeScanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="esc-43-MRA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="oPQ-To-5cu">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6au-tj-Wh4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oPQ-To-5cu" firstAttribute="top" secondItem="6au-tj-Wh4" secondAttribute="top" id="7yB-Qj-k7E"/>
+                            <constraint firstItem="oPQ-To-5cu" firstAttribute="leading" secondItem="6au-tj-Wh4" secondAttribute="leading" id="ACd-Ti-eHb"/>
+                            <constraint firstItem="6au-tj-Wh4" firstAttribute="trailing" secondItem="oPQ-To-5cu" secondAttribute="trailing" id="Cax-24-7VY"/>
+                            <constraint firstItem="6au-tj-Wh4" firstAttribute="bottom" secondItem="oPQ-To-5cu" secondAttribute="bottom" id="QV7-gN-Cb1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="historyDetailTableView" destination="oPQ-To-5cu" id="ZsT-di-0SG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RPs-11-NJ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4047.826086956522" y="32.8125"/>
+            <point key="canvasLocation" x="1178" y="-40"/>
         </scene>
         <!--Scan-->
         <scene sceneID="y5h-EF-OxP">

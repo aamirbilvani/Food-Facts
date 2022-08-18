@@ -19,7 +19,7 @@ class ProductVC: UIViewController {
     var openFoodFactProduct: OpenFoodFactsProducts? = nil
     
     var barcodeSpiderProduct: Item_attributes? = nil
-    
+    var barcodeSpiderStores: [BarcodeSpiderProductModel_Stores]? = []
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,6 +50,11 @@ class ProductVC: UIViewController {
         if let product = barcodeSpiderProduct {
             PersistanceManager().addHistoryItem(product)
         }
+        
+        if let stores = barcodeSpiderStores {
+            PersistanceManager().addStores(stores)
+        }
+        
         
 //        guard let product = product else { return }
 //

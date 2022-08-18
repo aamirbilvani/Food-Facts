@@ -77,6 +77,10 @@ extension SearchProductsVC: UISearchBarDelegate {
 //          productsSearchTableView.reloadData()
 //      }
     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.view.endEditing(true)
+    }
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty {
             shouldShowSearchResults = false
@@ -89,7 +93,7 @@ extension SearchProductsVC: UISearchBarDelegate {
         } else {
             if searchText.count > 2 {
                 shouldShowSearchResults = true
-                WebService.shared.getSearchedFoodFactsProduct(query: searchText) { [weak self] products, error, response in
+                WebService.shared.getSearchedFoodFactsProduct(query: searchText.lowercased()) { [weak self] products, error, response in
                     
                     guard let self = self else { return }
                     guard error == nil else {
@@ -102,7 +106,7 @@ extension SearchProductsVC: UISearchBarDelegate {
                     guard response as? HTTPURLResponse == nil else {
                         print("Error with the response, unexpected status code: \(response)")
                         //                          barcodeCapture.isEnabled = true
-                        self.showSimpleAlert(errorMessage: "Product Not Found!")
+                        self.showSimpleAlert(errorMessage: response?.description ?? "Error Found!")
                         return
                     }
                     
@@ -110,7 +114,7 @@ extension SearchProductsVC: UISearchBarDelegate {
                     
                     guard let product = products else { return }
                     guard product.products!.count > 0 else {
-                        self.showSimpleAlert(errorMessage: "Product Not Found!")
+//                        self.showSimpleAlert(errorMessage: "Product Not Found!")
                         return
                     }
                     self.filteredArray = product.products ?? []

@@ -69,14 +69,14 @@ struct Nutriments : Codable {
     let carbohydrates_serving : Double?
     let carbohydrates_unit : String?
     let carbohydrates_value : Double?
-    
+
     let cocoa : Double?
     let cocoa_100g : Double?
     let cocoa_label : String?
     let cocoa_serving : Double?
     let cocoa_unit : String?
     let cocoa_value : Double?
-    
+
     let energy : Int?
     let energy_kcal : Int?
     let energy_kcal_100g : Int?
@@ -92,53 +92,53 @@ struct Nutriments : Codable {
     let energy_serving : Int?
     let energy_unit : String?
     let energy_value : Int?
-    
+
     let fat : Double?
     let fat_100g : Double?
     let fat_serving : Double?
     let fat_unit : String?
     let fat_value : Double?
-    
+
     let fiber : Int?
     let fiber_100g : Int?
     let fiber_serving : Int?
     let fiber_unit : String?
     let fiber_value : Int?
-    
+
     let fruits_vegetables_nuts_estimate_from_ingredients_100g : Int?
     let fruits_vegetables_nuts_estimate_from_ingredients_serving : Int?
-    
+
     let nova_group : Int?
     let nova_group_100g : Int?
     let nova_group_serving : Int?
-    
+
     let nutrition_score_fr : Int?
     let nutrition_score_fr_100g : Int?
-    
+
     let proteins : Double?
     let proteins_100g : Double?
     let proteins_serving : Double?
     let proteins_unit : String?
     let proteins_value : Double?
-    
+
     let salt : Double?
     let salt_100g : Double?
     let salt_serving : Double?
     let salt_unit : String?
     let salt_value : Double?
-    
+
     let saturated_fat : Double?
     let saturated_fat_100g : Double?
     let saturated_fat_serving : Double?
     let saturated_fat_unit : String?
     let saturated_fat_value : Double?
-    
+
     let sodium : Double?
     let sodium_100g : Double?
     let sodium_serving : Double?
     let sodium_unit : String?
     let sodium_value : Double?
-    
+
     let sugars : Double?
     let sugars_100g : Double?
     let sugars_serving : Double?
@@ -152,15 +152,15 @@ struct Nutriments : Codable {
         case carbohydrates_serving = "carbohydrates_serving"
         case carbohydrates_unit = "carbohydrates_unit"
         case carbohydrates_value = "carbohydrates_value"
-        
+
         case cocoa = "cocoa"
         case cocoa_100g = "cocoa_100g"
         case cocoa_label = "cocoa_label"
         case cocoa_serving = "cocoa_serving"
         case cocoa_unit = "cocoa_unit"
         case cocoa_value = "cocoa_value"
-        
-        
+
+
         case energy = "energy"
         case energy_kcal = "energy-kcal"
         case energy_kcal_100g = "energy-kcal_100g"

@@ -27,6 +27,9 @@
 		34A17F2A289912BA008A4C61 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A17F29289912BA008A4C61 /* WebService.swift */; };
 		34A17F2E2899557E008A4C61 /* ProductInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A17F2C2899557E008A4C61 /* ProductInfoCell.swift */; };
 		34A17F2F2899557E008A4C61 /* ProductInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34A17F2D2899557E008A4C61 /* ProductInfoCell.xib */; };
+		34A1E29728ABC13D00DD5A84 /* HistoryProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A1E29628ABC13D00DD5A84 /* HistoryProductDetailVC.swift */; };
+		34A1E29B28ABC4D200DD5A84 /* ProductImageTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A1E29928ABC4D200DD5A84 /* ProductImageTitleCell.swift */; };
+		34A1E29C28ABC4D200DD5A84 /* ProductImageTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34A1E29A28ABC4D200DD5A84 /* ProductImageTitleCell.xib */; };
 		34B634E8289BA7B8008920A3 /* SearchProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B634E7289BA7B8008920A3 /* SearchProductsVC.swift */; };
 		34B634EB289BD14F008920A3 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B634E9289BD14F008920A3 /* SearchTableViewCell.swift */; };
 		34B634EC289BD14F008920A3 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34B634EA289BD14F008920A3 /* SearchTableViewCell.xib */; };
@@ -54,6 +57,9 @@
 		34A17F29289912BA008A4C61 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		34A17F2C2899557E008A4C61 /* ProductInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoCell.swift; sourceTree = "<group>"; };
 		34A17F2D2899557E008A4C61 /* ProductInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductInfoCell.xib; sourceTree = "<group>"; };
+		34A1E29628ABC13D00DD5A84 /* HistoryProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryProductDetailVC.swift; sourceTree = "<group>"; };
+		34A1E29928ABC4D200DD5A84 /* ProductImageTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageTitleCell.swift; sourceTree = "<group>"; };
+		34A1E29A28ABC4D200DD5A84 /* ProductImageTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductImageTitleCell.xib; sourceTree = "<group>"; };
 		34B634E7289BA7B8008920A3 /* SearchProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProductsVC.swift; sourceTree = "<group>"; };
 		34B634E9289BD14F008920A3 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		34B634EA289BD14F008920A3 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
@@ -118,6 +124,7 @@
 				34B634E7289BA7B8008920A3 /* SearchProductsVC.swift */,
 				34B92D8428A62797008B75B1 /* PersistanceManager.swift.swift */,
 				34B92D8C28A640E7008B75B1 /* HistoryTableViewController.swift */,
+				34A1E29628ABC13D00DD5A84 /* HistoryProductDetailVC.swift */,
 			);
 			path = BarcodeScanner;
 			sourceTree = "<group>";
@@ -136,6 +143,7 @@
 		34A17F2B28994E8E008A4C61 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				34A1E29828ABC43D00DD5A84 /* Product History Detail */,
 				34A17F2C2899557E008A4C61 /* ProductInfoCell.swift */,
 				34A17F2D2899557E008A4C61 /* ProductInfoCell.xib */,
 				34B634E9289BD14F008920A3 /* SearchTableViewCell.swift */,
@@ -144,6 +152,15 @@
 				34B92D8928A63BE8008B75B1 /* HistoryTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		34A1E29828ABC43D00DD5A84 /* Product History Detail */ = {
+			isa = PBXGroup;
+			children = (
+				34A1E29928ABC4D200DD5A84 /* ProductImageTitleCell.swift */,
+				34A1E29A28ABC4D200DD5A84 /* ProductImageTitleCell.xib */,
+			);
+			path = "Product History Detail";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +243,7 @@
 				34A17F0B2898FD53008A4C61 /* Main.storyboard in Resources */,
 				34B92D8B28A63BE8008B75B1 /* HistoryTableViewCell.xib in Resources */,
 				34B634EC289BD14F008920A3 /* SearchTableViewCell.xib in Resources */,
+				34A1E29C28ABC4D200DD5A84 /* ProductImageTitleCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +260,7 @@
 				34A17F2A289912BA008A4C61 /* WebService.swift in Sources */,
 				34A17F2528990B52008A4C61 /* ProductVC.swift in Sources */,
 				34A17F2E2899557E008A4C61 /* ProductInfoCell.swift in Sources */,
+				34A1E29728ABC13D00DD5A84 /* HistoryProductDetailVC.swift in Sources */,
 				34A17F082898FD53008A4C61 /* ViewController.swift in Sources */,
 				34A17F042898FD53008A4C61 /* AppDelegate.swift in Sources */,
 				34B634E8289BA7B8008920A3 /* SearchProductsVC.swift in Sources */,
@@ -249,6 +268,7 @@
 				34A17F062898FD53008A4C61 /* SceneDelegate.swift in Sources */,
 				34BB4D1D289A8C2A003E3C8B /* OpenFoodFactsProductModel.swift in Sources */,
 				34B92D8728A62936008B75B1 /* HistoryItem.swift in Sources */,
+				34A1E29B28ABC4D200DD5A84 /* ProductImageTitleCell.swift in Sources */,
 				34B634EB289BD14F008920A3 /* SearchTableViewCell.swift in Sources */,
 				34B92D8D28A640E7008B75B1 /* HistoryTableViewController.swift in Sources */,
 			);
@@ -402,6 +422,7 @@
 				DEVELOPMENT_TEAM = 53M8N739SK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BarcodeScanner/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Food Nutri";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Barcode Scanner want to access your camera to capture the products barcode";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -414,7 +435,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = nova.BarcodeScanner;
+				PRODUCT_BUNDLE_IDENTIFIER = nova.FoodFacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -432,6 +453,7 @@
 				DEVELOPMENT_TEAM = 53M8N739SK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BarcodeScanner/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Food Nutri";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Barcode Scanner want to access your camera to capture the products barcode";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -444,7 +466,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = nova.BarcodeScanner;
+				PRODUCT_BUNDLE_IDENTIFIER = nova.FoodFacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

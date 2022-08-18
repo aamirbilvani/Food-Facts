@@ -58,6 +58,21 @@ extension HistoryTableViewController: UITableViewDelegate, UITableViewDataSource
         return configuration
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "HistoryProductDetailVC") as! HistoryProductDetailVC
+        
+        let items = PersistanceManager().getHistory()
+        let item = items[indexPath.row]
+        vc.title = item.productName ?? "Detail"
+//                    barcodeCapture.isEnabled = true
+        vc.product = item
+        vc.stores = PersistanceManager().getStores()
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
 //    func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
 //        print("did end editing")
 //        guard let indexPath = indexPath else {return}

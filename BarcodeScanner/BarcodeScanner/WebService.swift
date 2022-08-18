@@ -97,11 +97,13 @@ class WebService {
         task.resume()
     }
     
+//    "https://world.openfoodfacts.org/cgi/search.pl?search_terms=\(query)&search_simple=1&action=process&json=1&page=1&fields=code,product_name,brands,image_url"
     
+
     
     func getSearchedFoodFactsProduct(query: String, completion: @escaping (OpenFoodFactsProductModel?, Error?, URLResponse?) -> Void) {
         guard !query.isEmpty else { return }
-        let url = URL(string: "https://world.openfoodfacts.org/cgi/search.pl?search_terms=\(query)&search_simple=1&action=process&json=1&page=1&fields=code,product_name,brands,image_url")
+        let url = URL(string: "https://world.openfoodfacts.org/cgi/search.pl?search_terms=\(query)&fields=code,product_name,brands,image_url&action=process&tagtype_0=categories&json=1&page=1&tag_contains_0=contains&tag_0=\(query)")
         guard let url = url else { return }
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             
@@ -118,12 +120,25 @@ class WebService {
                       return
                   }
             
-            if let data = data,
-               let product = try? JSONDecoder().decode(OpenFoodFactsProductModel.self, from: data) {
-                
-                print("Product:", product)
-                completion(product, nil, nil)
+            guard let data = data else {
+                return
             }
+            
+            do {
+              let product = try? JSONDecoder().decode(OpenFoodFactsProductModel.self, from: data)
+                print("Product--", product)
+                completion(product, nil, nil)
+            } catch let DecodingError.typeMismatch(type, context)  {
+                print("Type '\(type)' mismatch:", context.debugDescription)
+                print("codingPath:", context.codingPath)
+             }
+            
+//            if let data = data,
+//               let product = try? JSONDecoder().decode(OpenFoodFactsProductModel.self, from: data) {
+//
+//                print("Product:", product)
+//                completion(product, nil, nil)
+//            }
         }
         task.resume()
     }

@@ -19,6 +19,10 @@ class ViewController: UIViewController {
     var barcodeCapture: BarcodeCapture? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        cameraView.layer.cornerRadius = 10
+//        cameraView.layer.masksToBounds = true
+        self.title = "Scan Product"
         settings.set(symbology: .code128, enabled: true)
         settings.set(symbology: .code39, enabled: true)
         settings.set(symbology: .qr, enabled: true)
@@ -43,7 +47,13 @@ class ViewController: UIViewController {
         camera?.switch(toDesiredState: .on)
         
         let captureView = DataCaptureView(context: context, frame: cameraView.bounds)
+        captureView.scanAreaMargins = MarginsWithUnit(left: FloatWithUnit(value: 30, unit: .dip),
+                                          top: FloatWithUnit(value: 200, unit: .dip),
+                                          right: FloatWithUnit(value: 30, unit: .dip),
+                                          bottom: FloatWithUnit(value: 200, unit: .dip))
         captureView.context = context
+//        captureView.layer.cornerRadius = 10
+//        captureView.layer.masksToBounds = true
         captureView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         cameraView.addSubview(captureView)
         

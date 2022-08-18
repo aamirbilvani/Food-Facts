@@ -23,6 +23,44 @@ class PersistanceManager {
         let realm = getRealm()
         return Array(realm.objects(HistoryItem.self).sorted(byKeyPath: "timestamp", ascending: false))
     }
+    
+    func getStores() -> [ProductStores] {
+        let realm = getRealm()
+        return Array(realm.objects(ProductStores.self))
+    }
+    
+    
+    func addStores(_ stores: [BarcodeSpiderProductModel_Stores]) {
+        DispatchQueue.global(qos: .background).async {
+
+            let realm = self.getRealm()
+
+            do {
+                let items = [ProductStores]()
+
+                for store in 0..<items.count {
+                    
+                    items[store].store_name = stores[store].store_name
+                    items[store].title = stores[store].title
+                    items[store].image = stores[store].image
+                    items[store].price = stores[store].price
+                    items[store].currency = stores[store].currency
+                    items[store].link = stores[store].link
+                    items[store].updated = stores[store].updated
+                    try realm.write {
+                        realm.add(items[store], update: .all)
+                    }
+                }
+                
+
+
+                
+            } catch let error as NSError {
+                print(error.localizedDescription)
+
+            }
+        }
+    }
 
     func addHistoryItem(_ product: Item_attributes) {
         DispatchQueue.global(qos: .background).async {
@@ -39,6 +77,7 @@ class PersistanceManager {
                 item.imageUrl = product.image
                 item.timestamp = Date()
                 item.brand = product.brand
+                item.itemDescription = product.description
                 
     //            item.barcode = barcode
     //            item.productName = product.name

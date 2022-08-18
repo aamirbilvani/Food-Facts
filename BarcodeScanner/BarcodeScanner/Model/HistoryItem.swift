@@ -26,6 +26,7 @@ class HistoryItem: Object {
 //    @objc dynamic var labels: String?
     @objc dynamic var imageUrl: String?
     @objc dynamic var timestamp = Date()
+    @objc dynamic var itemDescription: String?
 //    @objc dynamic var nutriscore: String?
 //    @objc dynamic var ecoscore: String?
 //    let novaGroup = RealmOptional<Int>()
@@ -51,3 +52,21 @@ class HistoryItem: Object {
         return "barcode"
     }
 }
+
+
+class ProductStores: Object {
+    
+    @objc dynamic var store_name : String?
+    @objc dynamic var title : String?
+    @objc dynamic var image : String?
+    @objc dynamic var price : String?
+    @objc dynamic var currency : String?
+    @objc dynamic var link : String?
+    @objc dynamic var updated : String?
+    
+    override static func primaryKey() -> String? {
+        return "link"
+    }
+}
+
+

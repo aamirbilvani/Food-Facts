@@ -27,7 +27,7 @@ class SearchTableViewCell: UITableViewCell {
         nameLabel.text = product.product_name
 //        brandLabel.text = product.brands
 //        descLabel.text = ""
-        let url = URL(string: product.image_url ?? "https://images.openfoodfacts.org/images/products/301/762/042/2003/front_en.399.400.jpg")
+        let url = URL(string: product.image_url ?? "https://peugeot.navigation.com/static/WFS/Shop-CitroenEMEA-Site/-/Shop/en_US/Product%20Not%20Found.png")
         productImageView.kf.setImage(with: url)
     }
     
